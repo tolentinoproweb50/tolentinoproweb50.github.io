@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .figura{
+            position: fixed;
+            font-size: px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Muevete</h1>
+    <div id="figura1" class="figura">&#x1f600</div>
+    <footer>
+        
+    </footer>
+    <script>
+        let r= 0;
+        setInterval(graf, 10);
+        function graf(){
+            const x = 40 * Math.sin(r) + 40;
+            const y = 40 * Math.cos(r) + 60;
+            figura1.style.right = `${x}px`;
+            figura1.style.top = `${y}px`;
+            r+=.03;
+        }
+    </script>
+</body>
+</html>
