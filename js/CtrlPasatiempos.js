@@ -50,7 +50,7 @@ function htmlLista(snap) {
   } else {
     html += /* html */
       `<li class="vacio">
-        -- No hay pasatiempos
+        -- No hay productos
         registrados. --
       </li>`;
   }
