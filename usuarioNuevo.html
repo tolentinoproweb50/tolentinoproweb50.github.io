@@ -5,33 +5,19 @@
   <meta name="viewport"
     content="width=device-width,
        initial-scale=1.0">
-  <title>Sesión</title>
-  <!--
-    Carga el núcleo de Firebase
-    JS SDK
-  -->
+  <title>Usuario Nuevo</title>
   <script
     src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js">
     </script>
-  <!--
-    Agrega el manejo de
-    autenticación.
-  -->
   <script
     src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js">
     </script>
-  <!--
-    Agrega el manejo de bases de
-    datos.
-  -->
   <script
     src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js">
     </script>
-  <!--
-    Configura la app usando la
-    información del sitio de
-    Firebase.
-  -->
+  <script
+    src="https://www.gstatic.com/firebasejs/8.5.0/firebase-storage.js">
+    </script>
   <script src="js/init.js">
   </script>
   <script type="module"
@@ -50,41 +36,62 @@
   <form name="forma">
     <mi-nav></mi-nav>
     <header>
-      <h1>Sesión</h1>
+      <h1>Usuario Nuevo</h1>
       <div class="herramientas">
-        <button
-          type="button"
-          name="terminarSesión">
-          Cerrar Sesión
+        <a href="usuarios.html">
+          Cancelar</a>
+        <button type="submit">
+          Guardar
         </button>
       </div>
     </header>
-    <figure>
-      <img id="avatar" src=""
-        alt="Avatar">
-    </figure>
     <p>
       <label>
-        Email
-        <output name="email">
-          <mi-progreso>
-          </mi-progreso>
-        </output>
+        Registrar
+        <input name="cue"
+          type="email" required>
       </label>
     </p>
     <p>
       <label>
-        Nombre
-        <output name="nombre">
-          <mi-progreso>
-          </mi-progreso>
-        </output>
+        Avatar
+        <input name="avatar"
+          type="file" required
+          accept=".png,.jpg,.jpeg,.gif">
       </label>
     </p>
+    <!--
+      Maneja una asociación a uno.
+    -->
+    <p>
+      <label>
+        Productos
+        <select
+          name="pasatiempoId">
+          <option>
+            Cargando…
+          </option>
+        </select>
+      </label>
+    </p>
+    <!--
+      Maneja una asociación a
+      muchos.
+    -->
+    <fieldset>
+      <legend>Roles</legend>
+      <ul id="listaRoles"
+        class="checks">
+        <li>
+          <mi-progreso>
+          </mi-progreso>
+        </li>
+      </ul>
+    </fieldset>
     <mi-footer></mi-footer>
   </form>
   <script type="module"
-    src="js/CtrlSesion.js">
+    src="js/CtrlUsuarioNuevo.js">
     </script>
 </body>
 </html>
