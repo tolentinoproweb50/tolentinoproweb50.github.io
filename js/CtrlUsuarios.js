@@ -133,7 +133,7 @@ async function
         `${cod(data.nombre)}`);
     }
   }
-  return "-- Sin Pasatiempo --";
+  return "-- No hay productos registrados --";
 }
 
 /** Recupera el html de los
