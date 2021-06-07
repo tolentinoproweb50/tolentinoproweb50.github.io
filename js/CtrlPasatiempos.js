@@ -50,8 +50,8 @@ function htmlLista(snap) {
   } else {
     html += /* html */
       `<li class="vacio">
-        -- No hay productos
-        registrados. --
+        -- No hay registros
+        de productos. --
       </li>`;
   }
   lista.innerHTML = html;
