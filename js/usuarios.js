@@ -11,7 +11,7 @@ import {
   muestraUsuarios
 } from "./navegacion.js";
 
-const SIN_PRODUCT = /* html */
+const SIN_PASATIEMPO = /* html */
   `<option value="">
     -- Sin Registro de Productos --
   </option>`;
@@ -29,14 +29,14 @@ const daoUsuario = firestore.
     HTMLSelectElement} select
  * @param {string} valor */
 export function
-  selectProduct(select,
+  selectPasatiempos(select,
     valor) {
   valor = valor || "";
-  daoProduct.
+  daoPasatiempo.
     orderBy("nombre").
     onSnapshot(
       snap => {
-        let html = SIN_PRODUCT;
+        let html = SIN_PASATIEMPO;
         snap.forEach(doc =>
           html += htmlProduct(
             doc, valor));
@@ -56,13 +56,13 @@ export function
   DocumentSnapshot} doc
  * @param {string} valor */
 function
-  htmlProduct(doc, valor) {
+  htmlPasatiempo(doc, valor) {
   const selected =
     doc.id === valor ?
       "selected" : "";
   /**
    * @type {import("./tipos.js").
-                  PasaProduct} */
+                  PasaPasatiempo} */
   const data = doc.data();
   return (/* html */
     `<option

@@ -13,9 +13,9 @@ import {
 /** @type {HTMLUListElement} */
 const lista = document.
   querySelector("#lista");
-const daoProduct =
+const daoPasatiempo =
   getFirestore().
-    collection("Productos");
+    collection("Pasatiempo");
 
 getAuth().
   onAuthStateChanged(
