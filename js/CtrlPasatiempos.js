@@ -32,7 +32,7 @@ async function protege(usuario) {
 }
 
 function consulta() {
-  daoProduct.
+  daoPasatiempo.
     orderBy("nombre")
     .onSnapshot(
       htmlLista, errConsulta);
@@ -50,8 +50,8 @@ function htmlLista(snap) {
   } else {
     html += /* html */
       `<li class="vacio">
-        -- No hay registros
-        de productos. --
+        -- No hay pasatiempos
+        registrados. --
       </li>`;
   }
   lista.innerHTML = html;

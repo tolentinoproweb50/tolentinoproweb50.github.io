@@ -13,9 +13,9 @@ import {
   tieneRol
 } from "./seguridad.js";
 
-const daoProduct =
+const daoPasatiempo =
   getFirestore().
-    collection("Product");
+    collection("Pasatiempo");
 const params =
   new URL(location.href).
     searchParams;
@@ -41,14 +41,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoProduct.
+      await daoPasatiempo.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Product} */
+                  Pasatiempo} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -82,7 +82,7 @@ async function guarda(evt) {
     const modelo = {
       nombre
     };
-    await daoProduct.
+    await daoPasatiempo.
       doc(id).
       set(modelo);
     muestraPasatiempos();
@@ -95,7 +95,7 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoProduct.
+      await daoPasatiempo.
         doc(id).
         delete();
       muestraPasatiempos();

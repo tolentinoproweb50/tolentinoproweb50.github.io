@@ -13,7 +13,7 @@ import {
 
 const SIN_PASATIEMPO = /* html */
   `<option value="">
-    -- Sin Registro de Productos --
+    -- Sin Pasatiempo --
   </option>`;
 
 const firestore = getFirestore();
@@ -38,13 +38,13 @@ export function
       snap => {
         let html = SIN_PASATIEMPO;
         snap.forEach(doc =>
-          html += htmlProduct(
+          html += htmlPasatiempo(
             doc, valor));
         select.innerHTML = html;
       },
       e => {
         muestraError(e);
-        selectProduct(
+        selectPasatiempos(
           select, valor);
       }
     );
@@ -62,7 +62,7 @@ function
       "selected" : "";
   /**
    * @type {import("./tipos.js").
-                  PasaPasatiempo} */
+                  Pasatiempo} */
   const data = doc.data();
   return (/* html */
     `<option
