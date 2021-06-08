@@ -11,7 +11,7 @@
 /**
  * @typedef {Object} Usuario
  * @property {string[]} rolIds
- * @property {string} pasatiempoId
+ * @property {string} productId
  */
 
 // @ts-nocheck

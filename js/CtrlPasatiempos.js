@@ -13,9 +13,9 @@ import {
 /** @type {HTMLUListElement} */
 const lista = document.
   querySelector("#lista");
-const daoPasatiempo =
+const daoProduct =
   getFirestore().
-    collection("Pasatiempo");
+    collection("Productos");
 
 getAuth().
   onAuthStateChanged(
@@ -32,7 +32,7 @@ async function protege(usuario) {
 }
 
 function consulta() {
-  daoPasatiempo.
+  daoProduct.
     orderBy("nombre")
     .onSnapshot(
       htmlLista, errConsulta);
