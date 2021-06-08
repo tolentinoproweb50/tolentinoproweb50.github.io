@@ -8,7 +8,7 @@ import {
 
 const firestore = getFirestore();
 const daoUsuario = firestore.
-  collection("Usuario");z
+  collection("Usuario");
 
 export async function
   iniciaSesión() {

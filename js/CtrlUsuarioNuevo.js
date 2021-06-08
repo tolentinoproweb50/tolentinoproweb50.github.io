@@ -32,7 +32,7 @@ async function protege(usuario) {
     forma.addEventListener(
       "submit", guarda);
     selectPasatiempos(
-      forma.productId, "");
+      forma.pasatiempoId, "");
     checksRoles(listaRoles, []);
   }
 }

@@ -1,3 +1,3 @@
-# tolentinoproweb50.github.io
+# propuweb8.github.io
 Propuesta de Proyecto
-https://tolentinoproweb50.github.io/
+https://propuweb8.github.io
